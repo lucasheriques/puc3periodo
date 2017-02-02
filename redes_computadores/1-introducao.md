@@ -1,16 +1,3 @@
-# Distribuição dos Pontos
-Prova 1		-   25pts
-
-Prova 2		-   25pts
-
-Prova 3		-   25pts
-
-Exercícios	-   10pts
-
-Trabalho	-   15pts
-
-O conteúdo é **acumulativo**, porém será cobrado numa maneira menos detalhada ao longo das provas, sendo feito como um conjunto.
-
 # Introdução - Visão Geral de Redes de Computadores
 
 ## O que é a Internet: visão dos componentes
