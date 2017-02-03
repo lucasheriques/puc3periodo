@@ -11,3 +11,6 @@ Bibliografia:
 
 1. Livro do Cormen
 2. [Projeto e Análise de Algoritmos - Ziviani](http://www2.dcc.ufmg.br/livros/algoritmos/)
+
+### Engenharia de Requisitos
+Duas provas de 30 pontos, listas de exercícios e trabalhos totalizando 40 pontos. Provas tendem as ser mais teóricas - práticas serão feitas nos trabalhos.
