@@ -69,3 +69,75 @@ Erros em requisitos acarretam os seguintes problemas:
 3. Permitem a gerência de riscos desde os estágios iniciais de desenvolvimento.
 4. São a base para os testes de aceitação.
 5. Gerenciamento de contratos.
+
+## Conceitos de requisitos
+### Classificações de requisitos
+**Requisitos funcionais e não-funcionais**
+
+*Requisitos funcionais*: especificam ações que um sistema deve executar, sem levar em consideração restrições físicas. Exemplos:
+
+1. Será necessário realizar o fechamento contábil mensalmente
+2. O Gerente deverá visualizar todos os empréstimos efetuados no mês, indicando do funcionário que o disponibilizou o empréstimo, o cliente que obvete o empréstimo e o valor emprestado
+
+No requisito funcional, sempre conseguiremos identificar uma história (passos) detalhando o requisito. É o que vai dar origem a um ou mais *casos de uso*.
+
+*Requisitos não funcionais*: descrevem restrições desejadas ou necessárias, atributos do sistema ou de seu ambiente. Muitas vezes chamados de *restrições ou requisitos de qualidade*. Determinam a arquitetura do sistema. Estão classificados em:
+
+1. Condições específicas que o sistema deve atender
+2. Qualidades específicas que o sistema deve ter (rápido, eficiente, boa usabilidade, etc)
+3. Especifidades que o ambiente deve cumprir
+
+Podem ser de escopo *global*, que envolvem todo o sistema - exemplos: desempenho, ambiente, linguagem, tecnologia.
+
+Ou também de escopo *local*, que vale apenas para um requisito específico.
+
+Exemplos:
+
+1. O fechamento contábil do mês deverá ser realizado no máximo de 4h para um volume de até 40 milhões de registros
+2. A base de dados do sistema deverá ser armazenada em Oracle 10g
+3. O sistema deverá suportar dois idiomas: português e espanhol
+
+Tipos de requisitos não-funcionais:
+
+1. Usabilidade
+2.Confiabilidade
+3. Desempenho
+4. Suporte
+5. Desenho/Design Patterns
+6. Implementação
+7. Interface
+8. Físico
+
+---
+
+**Cliente x Sistema**
+
+O detalhadamento dos requisitos evolui durante o projeto.
+
+* Origem no cliente e nos usuários
+* Termina detalhado o suficiente para prosseguir o desenvolvimento do sistema
+
+*Requisitos do cliente:*
+
+* Expressam os resultados desejados para superar os problemas reais
+* Descrevem o problema enfrentado pelo cliente ou usuário, materializado a partir de suas necessidades, expectativas, restrições e interface apontadas
+* Descrevem as características desejáveis de uma solução
+* Delimitam o universo de soluções possíveis (domínio), ao invés de uma solução específica
+* Também chamado de *requisitos do usuário*
+
+Normalmente materializados em documentos iniciais, tais como *proposta técnica*, *documento de visão*, *lista de funcionalidades*. Possui uma linguagem muito próxima ao usuário.
+
+*Requisitos do sistema:*
+
+* Descrevem o comportamento de um sistema de computação apresentado como solução para o problema do cliente (uma escolha dentro do domínio delimitado)
+* Delimitam as interfaces de um sistema que soluciona o problema
+* Também podem ser chamados de *requisitos de produto*
+* Podem ser detalhados em requisitos de produto como um todo, ou requisitos do componentes do produto
+
+---
+
+**Outras classificações de requisitos**
+
+1. Técnico x Sistema / Técnico x Não-Técnico
+2. Requisitos de domínio
+  * Requisitos que vem do domínio da aplicação do sistema e refletem características ou restrições para aquele domínio
