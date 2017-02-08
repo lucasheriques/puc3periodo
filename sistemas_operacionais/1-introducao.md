@@ -135,12 +135,14 @@ Recomendação de filme: Pirates of Sillicon Valley
 - Recursos compartilhados entre os diversos usuários e aplicações
 - São mais eficientes, no entanto são mais complexos para serem implementados. Porém, vale a pena por conta da economia de recursos.
 
-## 5. Classificação de Sistemas Operacionais
-Os Sistemas Operacionais Multiprogramáveis/Multitarefa podem ser classificados de acordo com que suas aplicações são gerenciadas, podendo ser divididas em:
+### Sistemas com Múltiplos Processadores
 
-- Batch
-- Tempo compartilhado
-- Tempo real
+## 5. Classificação de Sistemas Operacionais
+Os **Sistemas Operacionais Multiprogramáveis/Multitarefa** podem ser classificados de acordo com que suas aplicações são gerenciadas, podendo ser divididas em:
+
+- Sistemas Batch
+- Sistemas de Tempo Compartilhado
+- Sistemas de Tempo Real
 
 Com o tempo, surgiram novas classificações:
 
@@ -149,3 +151,87 @@ Com o tempo, surgiram novas classificações:
 - Sistemas Distribuídos
 
 Cluster é um aglomarado (junção) de computadores, que tem a função de se comportar como um único computador. (top500.org)
+
+### Sistemas em Lote (Batch)
+- Operador comanda a submissão de tarefas (jobs)
+- Usuário =/= operador
+- Tarefas na forma de cartões perfurados
+- Tempo de configuração era reduzido, reunindo-se tarefas similares
+- Sequencialmente automático, controle transferindo automaticamente de um job para outro SO rudimentar
+
+**Problemas**: baixo desempenh, operações de CPU e I/O não podiam ser sobrepostas. A CPU ficava ociosa. A leitora de cartões era muito lenta.
+
+**Solução**: operação off-line carregados de unidades de fita para a memória. A leitura de cartões e tarefas de impressão eram feitas off-line.
+
+**Spooling**: permite a sobre posiçnåo de um job com o I/O de outro. Enquanto executa um job, SO.:
+
+- Lê o próximo job da leitora para o disco (fila de jobs)
+- Imprime a saída do job anterior, do disco para a impressora
+
+**Job pool**: estrutura de dados que permite selecionar qual job será executado a seguir, para aumentar uso da CPU.
+
+Importante guardar:
+
+- são feitos para rodar de forma sequencial
+- trazem a ideia de um processamento automático por meio de filas
+
+#### Sistemas em Batch Multiprogramados
+- Vários jobs são mantidos na memória principal ao mesmo tempo e a CPU é multiplexada.
+
+Multiplexação de processador: balanceamento de carga. Troca de contexto - simular uma programação paralela.
+
+O conceito de **interrupções** (em breve) é de extrema importância.
+
+### Sistemas de Tempo Compartilhado
+- Tipo de multiprogramação
+- A CPU é multiplexada entre diversos jobs mantidos em memória e em disco (a CPU é alocada a um job apenas se este estiver na memória)
+- O usuário tem a impressão que a CPU está dedicada
+- Um job é transferido do disco para a memória e da memória para o disco (SWAP)
+- *Divisão de tempo de processamento entre usuários*
+- São a base dos S.Os modernos
+
+#### Sistemas de Tempo Real
+S.Os específicos. Utilizado para controle de máquinas de linhas e produção, instrumentos de cunho científico. Normalmente sem interface de usuário com propósito bem específico em um dado momento de tempo. Ex: carros, utilizados em aeronaves, etc.
+
+#### Sistemas de Computadores Pessoais
+- PC: Sistema de Computação Dedicado a um único usuário.
+- Despositivos de I/O - teclado, mouse, vídeo, impressoras.
+- Praticidade e tempo de resposta.
+- Foram capazes de adotar tecnologia desenvolvida para sistemas de grande porte. O uso pessoal não existe sofisticação no gerenciamento da CPU nem em aspectos de proteção
+- A utilização de PCs por vários usuários e acesso à rede trazem novas necessidades de proteção e segurança.
+- Evolução para as estaões de trabalho.
+
+## Multiprogramação
+- Rotinas de I/O provisionadas pelo sistema
+- Gerência de memória: o sistema deve alocar memória para vários jobs
+- Escalonamento de CPU: o sistema deve escolher dentre os diversos jobs prontos para serem executados
+- Alocação de dispositivos
+
+## Sistemas Paralelos
+### Multiprocessamento Simétrico (SMP)
+- Cada processador
+
+
+### Multiprocessamento assimétrico
+
+## Sistemas Distribuídos
+- Distribuem a computação entre vários processadores físicos.
+- Sistemas fracamente acoplados, cada processador tem sua própria memória local. Processadores se comunicam através de linhas telefônicas e redes de alta velocidade.
+
+## Sistemas Distribuídos
+- Distribuem a computação entre vários processadores físicos.
+- Sistemas fracamente acoplados, cada processador tem sua própria memória local. Processadores se comunicam através de linhas telefônicas e redes de alta velocidade.
+
+## Sistemas Distribuídos
+- Distribuem a computação entre vários processadores físicos.
+- Sistemas fracamente acoplados, cada processador tem sua própria memória local. Processadores se comunicam através de linhas telefônicas e redes de alta velocidade.
+
+Vantagens:
+1. TODO
+
+Exemplos de serviços:
+
+- Proporcionam compartilhamento de arquivos
+- Gerenciam a comunicação
+- Executam de forma independente de outros computadores da rede
+- Dão a impressão que só existe um S.O. controlando a rede
