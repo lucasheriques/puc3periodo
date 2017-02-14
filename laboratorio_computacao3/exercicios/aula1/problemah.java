@@ -3,26 +3,25 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.BufferedReader;
 import java.lang.String;
+import java.io.IOException;
 
 public class problemah {
 
-	static InputStream is = System.in;
-	static InputStreamReader isr = new InputStreamReader(is);
-	static BufferedReader in = new BufferedReader(isr);
+	static InputStream is;
+	static InputStreamReader isr;
+	static BufferedReader in;
 
-	public static String removeVowels(String s) {
-
-		String noVowel = "";
+	public static String removeConsonants(String s) {
+		String noConsonants = "";
 
 		for (int i = 0; i < s.length(); i++) {
-			if (new String("aeiouAEIOU").contains(String.valueOf(s.charAt(i)))) noVowel += ""+s.charAt(i);
+			if (new String("aeiouAEIOU").contains(String.valueOf(s.charAt(i)))) noConsonants += ""+s.charAt(i);
 		}
 
-		return noVowel;
+		return noConsonants;
 	}
 
 	public static String reverseString(String s) {
-
 		String reverse = "";
 
 		for (int i = s.length() - 1; i >= 0; i--) {
@@ -32,13 +31,21 @@ public class problemah {
 		return reverse;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
-		String a = "bfasdfasseeeeeeaa";
+    is = System.in;
+    isr = new InputStreamReader(is);
+    in = new BufferedReader(isr);
 
-		System.out.println(removeVowels(a));
+		String a = in.readLine();
 
-		System.out.println("Reverse string: " + reverseString(a));
+    while (!a.equals("FIM")) {
+      a = removeConsonants(a);
+      if (a.equals(reverseString(a))) System.out.println("S");
+      else System.out.println("N");
+
+      a = in.readLine();
+    }
 
 	}
 }
