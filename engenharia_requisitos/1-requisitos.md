@@ -100,7 +100,7 @@ Exemplos:
 Tipos de requisitos não-funcionais:
 
 1. Usabilidade
-2.Confiabilidade
+2. Confiabilidade
 3. Desempenho
 4. Suporte
 5. Desenho/Design Patterns
