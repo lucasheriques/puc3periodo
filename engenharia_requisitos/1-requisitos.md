@@ -2,7 +2,7 @@
 ## Definição
 Requisitos possuem várias definições diferentes:
 
-1. Uma condição ou capacidade necessitada por um usuário para resolver um probelma ou atingir um objetivo.
+1. Uma condição ou capacidade necessitada por um usuário para resolver um probrema ou atingir um objetivo.
   * O que eu preciso que o meu software faça?
 2. Uma condição ou capacidade que deve ser cumprida ou possuída por um sistema ou componente do sistema para satisfazer um contrato, padrão, especificação ou outro documento formal imposto.
 3. Características que definem os critérios de aceitação de um produto.
@@ -29,7 +29,7 @@ Sem uma distinção clara entre o problema e a solução, o seguinte pode ocorre
 3. Discussões centradas no sistema (descritas em termos das soluções)
 
 ### Conhecimento do software
-Todo conhecimento necessário para o desenvolvimento da solução. Saber, minimamente, de tecnologias e soluções possíves, mas ter contatos de pessoas mais especializadas, para garantir se a solução é passível de ser realizada.
+Todo conhecimento necessário para o desenvolvimento da solução. Saber, minimamente, de tecnologias e soluções possíveis, mas ter contatos de pessoas mais especializadas, para garantir se a solução é passível de ser realizada.
 
 ## Por que requisitos são importantes?
 > A parte mais difícil de se fazer na construção de um sistema de software é deicidr precisamente o que construir. Nenhuma outra parte do trabalho conceitual é tão difícil quanto estabelecer detalhadamente os requisitos técnicos, incluindo todas as interfaces com pessoas, máquinas e outros sistemas. Nenhuma outra parte do trabalho prejudica tanto o sistema final se feita incorretamente. Nenhuma outra parte do trabalho é mais difícil de se reparar a posteriori
