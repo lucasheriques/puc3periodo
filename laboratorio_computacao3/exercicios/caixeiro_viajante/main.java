@@ -21,23 +21,15 @@ public class main {
 		try {
 			while (!a.equals(null)) {
 				a = in.readLine();
-
 				arr = a.split("\\t");
-
 				graph.addEdge(Integer.parseInt(arr[0]) - 1, Integer.parseInt(arr[1]) - 1, Integer.parseInt(arr[2]));
-
 			}
-
 		}
 
 		catch (NullPointerException e) {
-			graph.print();
 			graph.DFS();
 			System.err.println("Fim do Arquivo");
 		}
-
-
-
 	}
 
 }
