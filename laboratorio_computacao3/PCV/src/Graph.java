@@ -22,6 +22,8 @@ public class Graph {
     public final int EDGE = 1;
     public final int EMPTY = 0;
 
+    public int minPeso;
+
     Graph() {
         this.num_vertices = 5;
         this.matrix = new Vertice[25];
@@ -69,16 +71,23 @@ public class Graph {
         return resp;
     }
 
-    void circuitoHamilton(int v, int pos, int peso, int minCircuito[], int minPeso, int circuito[]) {
-        boolean visitados[] = new boolean[num_vertices];
+    void circuitoHamilton() {
+        int minCircuito[] = new int[num_vertices];
+        int circuito[] = new int[num_vertices];
+        boolean[] visitados = new boolean[num_vertices];
+        minPeso = Integer.MAX_VALUE;
+        circuitoHamilton(visitados, 0, 0, 0, minCircuito, circuito);
+    }
+
+    void circuitoHamilton(boolean[] visitados, int v, int pos, int peso, int minCircuito[], int circuito[]) {
         visitados[v] = true;
-        circuito[pos] = v;
+        circuito[pos++] = v;
 
         for (int u = 0; u < num_vertices; u++) {
             if (this.hasEdge(v, u) == 1) {
                 peso += this.vertexDistance(v, u);
                 if (visitados[u] == false) {
-                    circuitoHamilton(u, pos, peso, minCircuito, minPeso, circuito);
+                    circuitoHamilton(visitados, u, pos, peso, minCircuito, circuito);
                 } else {
                     if (pos == num_vertices)
                         if (minPeso > peso) {
@@ -86,12 +95,12 @@ public class Graph {
                             minCircuito = circuito;
                         }
                 }
-                peso -= this.vertexDistance(u, v);
-                pos--;
-                visitados[v] = false;
+                peso -= this.vertexDistance(v, u);
             }
         } // fim for
-        System.out.println(minCircuito.toString());
+        pos--;
+        visitados[v] = false;
+        System.out.println("Menor caminho: " + minPeso);
     }
 
     boolean isNullGraph() {

@@ -1,3 +1,5 @@
+import com.sun.xml.internal.fastinfoset.algorithm.IntEncodingAlgorithm;
+
 import java.io.*;
 import java.lang.String;
 import java.lang.reflect.Array;
@@ -89,8 +91,7 @@ public class Main {
         in = new BufferedReader(new FileReader("/Users/lucashenrique/PUC/3periodo/laboratorio_computacao3/PCV/src/k4.txt"));
 
         String a = in.readLine();
-        int minCircuito[] = new int[Integer.parseInt(a)];
-        int circuito[] = new int[Integer.parseInt(a)];
+
         String[] arr = a.split("\\t");
         Graph graph = new Graph(Integer.parseInt(arr[0]));
 
@@ -104,7 +105,7 @@ public class Main {
         } catch (NullPointerException e) {
             graph.print();
             PCV(graph, 0);
-            graph.circuitoHamilton(0, 0, Integer.MAX_VALUE, minCircuito, 0, circuito);
+            graph.circuitoHamilton();
             System.err.println("\nFim do Arquivo");
         }
     }
