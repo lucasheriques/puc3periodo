@@ -76,10 +76,10 @@ public class Graph {
         int circuito[] = new int[num_vertices];
         boolean[] visitados = new boolean[num_vertices];
         minPeso = Integer.MAX_VALUE;
-        circuitoHamilton(visitados, 0, 0, 0, minCircuito, circuito);
+        System.out.println("Menor caminho: " + circuitoHamilton(visitados, 0, 0, 0, minCircuito, circuito));
     }
 
-    void circuitoHamilton(boolean[] visitados, int v, int pos, int peso, int minCircuito[], int circuito[]) {
+    int circuitoHamilton(boolean[] visitados, int v, int pos, int peso, int minCircuito[], int circuito[]) {
         visitados[v] = true;
         circuito[pos++] = v;
 
@@ -100,7 +100,8 @@ public class Graph {
         } // fim for
         pos--;
         visitados[v] = false;
-        System.out.println("Menor caminho: " + minPeso);
+
+        return minPeso;
     }
 
     boolean isNullGraph() {
