@@ -1,5 +1,13 @@
 /**
- * Created by lucashenrique on 06/05/17.
+ * Created by lucashenrique on 06/05/17
+ * Autor: Lucas Henrique de Faria Silva
+ * Matricula: 556597
+ * Curso: Engenharia de Software
+ * Disciplina: Laboratório de Computação 3
+ * Professor: Felipe Cunha
+ *
+ * Instruções: para executar o algoritmo do Saco do Papai Noel, comente a linha 181 e descomente a linha 182
+ * Caso queira executar o algoritmo das Estátuas de Gelo, descomente a 181 e comente a linha 182
  */
 
 import java.io.*;
@@ -21,26 +29,6 @@ public class Main {
                 i--;
         }
         return numeroBlocos;
-    }
-
-    public void readBlocos() throws IOException {
-        BufferedReader d = new BufferedReader(new InputStreamReader(System.in));
-        String ler = null;
-        ler = d.readLine();
-        int casos = Integer.parseInt(ler);
-        while (casos > 0) {
-            ler = d.readLine();
-            int nBlocos = Integer.parseInt(ler.split(" ")[0]);
-            int comp = Integer.parseInt(ler.split(" ")[1]);
-            int[] blocos = new int[nBlocos];
-            ler = d.readLine();
-            for (int i = 0; i < ler.split(" ").length; i++) {
-                blocos[i] = Integer.parseInt(ler.split(" ")[i]);
-            }
-            casos--;
-            System.out.println("Número de blocos necessários: " + numeroBlocos(comp, blocos));
-        }
-        d.close();
     }
 
     /*
@@ -163,6 +151,26 @@ public class Main {
             problemaNatal(pesos, nPresentes, 50);
 
             repeticoes--;
+        }
+        d.close();
+    }
+
+    public void readBlocos() throws IOException {
+        BufferedReader d = new BufferedReader(new InputStreamReader(System.in));
+        String ler = null;
+        ler = d.readLine();
+        int casos = Integer.parseInt(ler);
+        while (casos > 0) {
+            ler = d.readLine();
+            int nBlocos = Integer.parseInt(ler.split(" ")[0]);
+            int comp = Integer.parseInt(ler.split(" ")[1]);
+            int[] blocos = new int[nBlocos];
+            ler = d.readLine();
+            for (int i = 0; i < ler.split(" ").length; i++) {
+                blocos[i] = Integer.parseInt(ler.split(" ")[i]);
+            }
+            casos--;
+            System.out.println("Número de blocos necessários: " + numeroBlocos(comp, blocos));
         }
         d.close();
     }
